@@ -1,0 +1,15 @@
+dependencies: 
+  - smartcontractkit/chainlink-brownie-contracts@0.6.0
+
+networks:
+  development:
+    eth_usd_price_feed_address: "0xD4A33860578DE61DBABDC8BFDB98FD742FA7028E"
+  mainnet-fork:
+    eth_usd_price_feed_address: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+
+
+compiler:
+  solc:
+    version: "0.7.5"
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.6.0"
