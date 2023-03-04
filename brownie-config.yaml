@@ -3,8 +3,17 @@ dependencies:
   - OpenZeppelin/openzeppelin-contracts@3.4.0
 
 networks:
-  development:
+  default: development
+  goerli:
+    vrf_coordinator: "0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D"
     eth_usd_price_feed_address: "0xD4A33860578DE61DBABDC8BFDB98FD742FA7028E"
+    link_token: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB"
+    keyhash: "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15"
+    fee: 250000000000000000
+  development:
+    keyhash: "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15"
+    fee: 250000000000000000
+
   mainnet-fork:
     eth_usd_price_feed_address: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
 
@@ -16,5 +25,7 @@ compiler:
       - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.6.1"
       - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0"
 
+wallets:
+  from_key: ${PRIVATE_KEY}
 
 
